@@ -4,10 +4,19 @@
 
 	<style>
 
+	li {
+		position: relative;
+	}
+
 	.highlighted {
 		font-weight: bold;
 		background: red;
 		color: white;
+	}
+
+	.legit:nth-child(4n+1):after {
+		content: '   legit';
+		color: blue;
 	}
 
 	</style>
@@ -23,7 +32,7 @@
 
 	      $("li").on("click", function () {
 	      	$(this).addClass("highlighted");
-	      });
+	      }).addClass("legit");
 	    });
 	});
 
