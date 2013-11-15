@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>DA - CJS 2013 Relay</title>
+	<script src="jquery/jquery.js"></script>
+
+	<script>
+
+	var url = 'http://judgingjs.herokuapp.com/leaderboard.json';
+
+	$.getJSON(url, function(result){
+		$.each(result, function(i, field){
+	      $("body ul").append("<li>" + field.name + "</li>");
+	    });
+	});
+
+	</script>
+</head>
+<body>
+
+	<ul>
+	</ul>
+
+</body>
+</html>
